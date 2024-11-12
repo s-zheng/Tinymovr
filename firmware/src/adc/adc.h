@@ -63,8 +63,12 @@ typedef enum
 // Tinymovr R3.3 (alpha2) and later have 2mOhm shunts, ADC gain x16
 // 1/2^12 * 2.5 / 0.002 / 16 ~= 0.0190734
 #if defined BOARD_REV_R33 || defined BOARD_REV_R5
-#define SHUNT_SCALING_FACTOR ( 0.0190734f )
-#define ADC_GAIN_VAL GAINx16
+//simovr has 10mOhm shunts, ADC gain x8
+// 1/(2^12) * 2.5 / 0.01 / 4
+#define SHUNT_SCALING_FACTOR ( 0.0152588f )
+#define ADC_GAIN_VAL GAINx4
+// #define SHUNT_SCALING_FACTOR ( 0.0190734f )
+// #define ADC_GAIN_VAL GAINx16
 
 // Tinymovr R3.2 (alpha1) and earlier have 1mOhm shunts, ADC gain x16
 // 1/2^12 * 2.5 / 0.001 / 16 ~= 0.0381469

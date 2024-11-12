@@ -3,7 +3,10 @@
     "files.associations": {
         "random": "c",
         "limits": "c",
-        "common.h": "c"
+        "common.h": "c",
+        "pac5xxx_driver_system.h": "c",
+        "system.h": "c",
+        "pac5xxx_gpio.h": "c"
     },
     "python.testing.unittestArgs": [
         "-v",
